@@ -1,0 +1,272 @@
+/* 
+    CSS documentation for index.html [ _CAFE ]
+
+    ColorScheme
+        Main background: #fff (white)
+        Main Accent color: rgb(124, 82, 34);
+        Secondary color: rgb(239, 227, 174);
+    Font Family
+        font-family: 'Special Elite', cursive;
+    
+    Scrolling
+        Smooth scroll (add -moz for firefox browser)
+
+*/
+
+/* CSS reset and document attributes */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    font-family: 'Special Elite', cursive;
+    line-height: 25px;
+}
+
+html {
+    text-align: center;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* Global styles & attributes */
+.container {
+    
+    margin: auto;
+    padding: 20px;
+}
+/* 
+Landing Page | Banner properties
+    wrapping container = [ div .container-landing ],
+    content container = [ header ],
+    elements = [h1], [span .underline], [a #about]
+ */
+.container-landing {
+    background-image: url('img/coffee-landing.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 80vh;
+    
+    display: flex;
+}
+header {
+    margin: auto;
+}
+    header a {
+    background-color: #fff;
+    border-radius: 10px;
+    color: rgb(124, 82, 34);
+    padding: 10px;
+    border: 2px solid rgb(124, 82, 34);
+    font-size: 30px;
+}
+.container-landing h1 {
+    font-size: 50px;
+    color: #fff;
+}
+.underline {
+    text-decoration: underline;
+    text-decoration-color: rgb(124, 82, 34);
+}
+/* Navigation properties for both 
+    .toplinks [top navigation],
+    .botlinks [footer navigation] 
+*/
+.nav {
+    clear: both;
+    height: 20vh;
+    
+}
+.nav a {
+    margin: auto;
+    padding: 15px;
+    background-color: rgb(124, 82, 34);
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+}
+.toplinks:hover, .botlinks:hover {
+    border: 1px solid rgb(124, 82, 34);
+    background-color:#fff;
+    color: rgb(124, 82, 34);
+    text-decoration: underline;
+}
+/*
+Basic flex layout container 
+Apply background images through: [flexbox images CSS section]
+    container = [div .container]
+    elements = [.box], [.box p]
+*/
+.box {
+    height: 250px;
+    width: 100%;
+    
+    background: #000;
+    
+    margin: auto;
+    display: flex;
+}
+/* box text */
+.box p {
+    margin: auto;
+    color: #fff;
+    text-shadow: 2px 2px rgb(124, 82, 34);
+    font-size: 24px;
+    text-decoration: underline;
+}
+/* coffee menu properties */
+/* menu containers */
+.container-menu {
+    margin: auto;
+}
+.menu {
+    padding: 25px;
+    margin: auto;
+}
+/* placement of items and pricing */
+.left {float: left; margin-left:50px}
+.right {float: right; margin-right: 50px;}
+
+/* order & submit button */
+#orderBtn,
+#submitBtn {
+    background-color: rgb(66, 57, 45);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 25px;
+    padding: 20px;
+    border: 2px solid #fff;
+    transition: all 3s;
+}
+#orderBtn:hover {
+    background-color: rgb(124, 82, 34);
+    text-decoration: underline;
+}
+/* customer reviews containers */
+.review {
+    background-color: rgb(66, 57, 45);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+/* contact us information */
+/* contact form containers
+    [div .container],
+    [div.container-form],
+    [div .form] + [form]
+*/
+.-container-form {
+    
+    border-radius: 10px;
+    height: 300px;
+    width: 50%;
+    display: flex;
+    margin: auto;
+}
+
+form {
+    width: fit-content;
+    margin: auto;
+    /* background: rgb(124, 82, 34); */
+}
+form input, textarea {
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    padding: 15px;
+    width: fit-content;
+    margin: 10px;
+
+}
+
+
+/* footer  */
+footer {
+    color: rgb(124, 82, 34);
+    font-size: 20px;
+    line-height: 15px;
+    padding: 25px;
+    border-top: 4px solid rgb(124, 82, 34);
+    
+
+}
+/* responsive images */
+img {
+    height: auto;
+    width: 100%;
+    }
+/* headings */
+h2 {
+    font-size: 25px;
+    text-decoration: underline;
+    color: rgb(124, 82, 34);
+}
+h3, h4 {
+    text-decoration: underline;
+    color: rgb(124, 82, 34);
+    padding: 10px;
+}
+
+/* flexbox images */
+/* cafe item background applied to [div .box] */
+/* Fan favourites images */
+.cafeItems1 {background-image: url('img/coffee-items1.jpg'); background-position: center; background-size: cover;}
+.cafeItems2 {background-image: url('img/coffee-items2.jpg'); background-position: center; background-size: cover;}
+.cafeItems3 {background-image: url('img/coffee-items3.jpg'); background-position: center; background-size: cover;}
+/* cafe form */
+.cafeForm1 {background-image: url('img/coffee-form.jpg'); background-position: right; background-size: cover;}
+
+.cafeService1 {background-image: url('img/coffee-services1.jpg'); background-position: center; background-size: cover;}
+.cafeService2 {background-image: url('img/coffee-services2.jpg'); background-position: center; background-size: cover;}
+.cafeService3 {background-image: url('img/coffee-services3.jpg'); background-position: center; background-size: cover;}
+
+
+
+/* desktop media queries for 
+    screens over 800px */
+@media screen and (min-width: 960px) {
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .box {
+        height: 300px;
+        width: 300px;
+        max-height: 370px;
+        width: 300px;
+        margin: auto;
+        display: flex;
+    }
+    img {
+        height: 350px;
+        width: 400px;
+        height: 450px;
+        width: 700px;
+        margin: auto;
+    }
+    .menu {
+        text-align: center;
+    }
+    .menu-border {
+        border: 1px solid;
+        border-radius: 10px;
+        background-color: rgb(124, 82, 34);
+        color: #fff;
+        max-width: 850px;
+        margin: auto;
+        height: auto;
+    }
+    .menu-border h4 {
+        font-size: 25px;
+        padding: 10px;
+        text-decoration: underline;
+        color: #fff;
+    }
+    .left {float: left; margin-left: 10px;}
+    .right {float: right; margin: 0px; padding-right: 10px;}
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- external stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+
+    <!-- external libaries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <!-- get animate.css cdn -->
+
+    <!-- external scripts -->
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container-landing">
+        <header>
+            <h1 class="animated flip"> le <span class="underline">cafe</span></h1>
+            <br>
+            <a href="#about">Enter!</a>
+            
+            <br>
+            
+        </header>
+    </div><!-- container landing ends here-->
+
+    <div class="nav flex">
+        <a href="#about" class="toplinks">About</a>
+        <a href="#menu" class="toplinks">Menu</a>
+        <a href="#contact" class="toplinks">Contact</a>
+    </div>
+<!-- about id -->
+    <div id="about" class="container" >
+        <h2>le Cafe, Melb.</h2>
+        <br>
+        <p>Kicking off 2019 to a robust and creamy beginning. Cafe, Melb. New to town but here to make coffee and boogy.
+                Accumulating a world wide variety of ingredients and mixtures to please all tastebuds.</p>
+        <br>
+        
+            <img src="img/coffee-cafe.jpg" alt="cafe machine">
+        <br>  
+        <br>
+         <p>Our shop is located in the 
+            heart of the melbourne CBD, and a short tram ride from flinders. Come in for "Tune Tuesdays & Thursdays" for a dance
+            and half price cup of coffee!</p>
+    </div>
+<!-- cafe menu 
+    containers = [div .container], [div .menu], [div .container-menu], [div .menu-border]
+    elements = [h2 & h4], [span classes = "left" & "right"]
+
+
+-->
+<div id="menu" class="container">
+        <h2>le Menu</h2>
+
+        <div class="menu">
+            <div class="container-menu">
+                <div class="menu-border">
+
+                <h4>Beverages</h4>
+                <br>
+                <span class="left">Cappuccino</span>
+                <span class="right">$4.50</span>
+                <br>
+                <span class="left">Latte</span>
+                <span class="right">$3.75</span>
+                <br>
+                <span class="left">Irish Coffee</span>
+                <span class="right">$7.50</span>
+                <br>
+                <span class="left">Espresso</span>
+                <span class="right">$2.50</span>
+                <br>
+                <span class="left">Macchiato</span>
+                <span class="right">$4.75</span>
+                <br>
+            
+                <h4>International Blends</h4>
+                <br>
+                <span class="left">Americano</span>
+                <span class="right">$4.50</span>
+                <br>
+                <span class="left">Con Panna</span>
+                <span class="right">$3.75</span>
+                <br>
+                <span class="left">Irish-coffee</span>
+                <span class="right">$7.50</span>
+                <br>
+                <span class="left">Hawaiian</span>
+                <span class="right">$2.50</span>
+                <br>
+                <span class="left">Breve</span>
+                <span class="right">$4.75</span>
+                <br>
+
+                <h4>Exotic Neccessities</h4>
+                <br>
+                <span class="left">Bounce Combo</span>
+                <span class="right">$8.50</span>
+                <br>
+                <span class="left">Bee's Wax</span>
+                <span class="right">$6.75</span>
+                <br>
+                <span class="left">Oats & yoghut</span>
+                <span class="right">$6.45</span>
+                <br>
+                <span class="left">Pineapple</span>
+                <span class="right">$7.50</span>
+                <br>
+                <span class="left">Insect Motif</span>
+                <span class="right">$4.75</span>
+                <br>
+
+            </div><!--menu border ends here-->
+
+            </div><!-- container-menu ends here-->
+        </div><!-- menu ends here-->
+    </div><!-- div id = menu, div class = container ends here-->
+
+<!--  order button for JavScript  -->
+    <div class="order">
+        <div class="container-button">
+            <button id="orderBtn">Order Now</button>
+        </div>
+    </div>
+<!-- fan favourites content 
+    containers = [div .container], [div .flex]
+    elements = [div .box], [.cafeItems 1..2..3..ect] -->
+    <div class="container">
+        <h2>Fan Favorites</h2>
+        <br>
+            <p>Browse some of our fast moving and highly rated items made fresh daily.</p>
+        <br>
+        <div class="flex"><!-- cafe items key for CSS-->
+            <div class="box cafeItems1"><p>The famous drip</p></div>
+            <div class="box cafeItems2"><p>Honey & Bee's wax smoothie</p></div>
+            <div class="box cafeItems3"><p>Breakfast bounce combo</p></div>
+        </div>
+</div>
+
+  
+<!-- cafe order form -->
+    <div class="container">
+        <h2>Our Service</h2>
+        <br>
+        <p>We pride ourselves on being coffee entrepreneur's and thats why we have decorated our cafe
+                with high tech, old school coffee drips from overseas. Ensuring that robust bursty flavour crafted
+                in a unique way.</p>
+      
+        <div class="box cafeService1"></div>
+        <br>
+        <p>Providing a funky and relaxing atmosphere during those early morning rush hours.</p>
+        <br>
+        
+        <div class="box cafeService2"></div>
+            <br>
+            <p>Combining home grown favourites with an exotic twist!</p>
+            <br>
+            <p>Come try our homemade oat based smoothie, perfect for an on the go breakfast!</p>
+
+            
+
+        <div class="box cafeService3"></div>
+        <br>
+        <p>Award winning white chocolate hazelnut lattes!</p> 
+    </div>
+<br>
+<!-- Review section -->
+<div class="container">
+    <div class="container-ratings">
+        <h2>Customer Reviews</h2>
+        <br>
+        <div class="review">
+            <q>Amazing international blends! will definatley be back</q><br>
+            <p>C D Harris, Melbourne.</p>
+        </div>
+        <br>
+        <div class="review">
+            <q>Nothing like Springfield, but still great!</q><br>
+            <p>A B Simpson, Melbourne.</p>
+        </div>
+        <br>
+        <div class="review">
+            <q>Great international blends! will definatley be back</q><br>
+            <p>C D Harris, Melbourne.</p>
+        </div>
+       
+
+    </div><!-- review [div container-ratings] ends here! -->
+</div><!-- review [div .container] ends here-->
+
+<!-- contact form and cafe location -->
+
+<div class="container">
+    <h2>Contact Us</h2>
+    <br>
+
+    <h3>Drop-In For A Cup</h3>
+    <div id="maps" class="container"></div>
+    <div class="box cafeForm1"></div>
+    <br>
+    <div class="container-form">
+        <div class="form">
+            <h3>Contact Information</h3>
+            <form action="#">
+                <input type="text" name="name" placeholder="Fullname Here"><br>
+                <input type="text" name="email" placeholder="Email Here"><br>
+                <input type="text" name="subject" placeholder="Topic | Subject"><br>
+                <input type="text" name="dob" placeholder="Date of birth here"><br>
+                <textarea name="comments" id="comments" cols="20" rows="5"></textarea><br>
+                <button id="submitBtn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- bottom navigation items -->
+    <div class="nav flex">
+            <a href="#about" class="botlinks">Top</a>
+            <a href="#menu" class="botlinks">Menu</a>
+            <a href="#contact" class="botlinks">Contact</a>
+        </div>
+
+    <div class="container-footer">
+        <footer>
+                
+            <h5>Page created by C D Harris</h5>
+            <h6>10% off first cup of coffee with coupon : <u>VWG-CC</u></h6>
+
+           
+        </footer>
+    </div>
+
+    
+</body>
+</html>
