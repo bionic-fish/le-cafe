@@ -29,41 +29,55 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-/* Global styles & attributes */
-.container {
-    
-    margin: auto;
-    padding: 20px;
-}
-/* 
-Landing Page | Banner properties
-    wrapping container = [ div .container-landing ],
-    content container = [ header ],
-    elements = [h1], [span .underline], [a #about]
- */
-.container-landing {
+/* sematic elements */
+header {
+    align-items: center;
+    background-color: rgb(124, 82, 34);;
     background-image: url('img/coffee-landing.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 80vh;
-    
     display: flex;
+    justify-content: center;
+    height: 50vh;
 }
+section {
+    padding: 35px;
+    margin: 10px auto;
+}
+nav {
+    background-color: #fff;
+    margin: 20px auto;
+}
+
+/* Global styles & attributes */
+.container {
+    
+    margin: 10px auto;
+    /* padding: 20px; */
+}
+.review {
+    margin: 10px auto;
+}
+ 
+
+/* header elements & props */
 header {
     margin: auto;
 }
-    header a {
+header a {
     background-color: #fff;
+    border: 2px solid rgb(124, 82, 34);
     border-radius: 10px;
     color: rgb(124, 82, 34);
-    padding: 10px;
-    border: 2px solid rgb(124, 82, 34);
     font-size: 30px;
+    padding: 10px;
 }
-.container-landing h1 {
+.landing__container h1 {
     font-size: 50px;
+    text-shadow: 4px rgb(124, 82, 34);
+    padding: 10px;
     color: #fff;
 }
 .underline {
@@ -74,26 +88,26 @@ header {
     .toplinks [top navigation],
     .botlinks [footer navigation] 
 */
-.nav {
-    clear: both;
-    height: 20vh;
-    
-}
-.nav a {
-    margin: auto;
-    padding: 15px;
-    background-color: rgb(124, 82, 34);
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-
-}
-.toplinks:hover, .botlinks:hover {
-    border: 1px solid rgb(124, 82, 34);
+a {
     background-color:#fff;
     color: rgb(124, 82, 34);
+    border: 2px solid rgb(124, 82, 34);;
+    border-radius: 5px;
+    color: rgb(124, 82, 34);;
+    font-size: 25px;
+    font-weight: 200;
+    margin: auto;
+    padding: 15px;
+    transition-duration: 1100ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+
+    text-decoration: none;
+}
+a:hover {
+    background-color: rgb(124, 82, 34);
+    border: 1px solid rgb(124, 82, 34);
+    color: #fff;
     text-decoration: underline;
 }
 /*
@@ -103,12 +117,15 @@ Apply background images through: [flexbox images CSS section]
     elements = [.box], [.box p]
 */
 .box {
+    
+    border-radius: 10px;
+
     height: 250px;
     width: 100%;
     
     background: #000;
     
-    margin: auto;
+    margin: 10px auto;
     display: flex;
 }
 /* box text */
@@ -118,6 +135,7 @@ Apply background images through: [flexbox images CSS section]
     text-shadow: 2px 2px rgb(124, 82, 34);
     font-size: 24px;
     text-decoration: underline;
+    letter-spacing: 3px;
 }
 /* coffee menu properties */
 /* menu containers */
@@ -160,12 +178,18 @@ Apply background images through: [flexbox images CSS section]
     height: 250px;
     padding: 10px;
 }
+#maps a {
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+
 /* contact form containers
     [div .container],
     [div.container-form],
     [div .form] + [form]
 */
-.-container-form {
+.form__container {
     
     border-radius: 10px;
     height: 300px;
@@ -177,7 +201,7 @@ Apply background images through: [flexbox images CSS section]
 form {
     width: fit-content;
     margin: auto;
-    /* background: rgb(124, 82, 34); */
+    
 }
 form input, textarea {
     text-align: center;
@@ -209,6 +233,7 @@ footer {
 }
 /* responsive images */
 img {
+    border-radius: 10px;
     height: auto;
     width: 100%;
     }
@@ -230,67 +255,102 @@ h3, h4 {
 .cafeItems1 {background-image: url('img/coffee-items1.jpg'); background-position: center; background-size: cover;}
 .cafeItems2 {background-image: url('img/coffee-items2.jpg'); background-position: center; background-size: cover;}
 .cafeItems3 {background-image: url('img/coffee-items3.jpg'); background-position: center; background-size: cover;}
-/* cafe form */
-.cafeForm1 {background-image: url('img/coffee-form.jpg'); background-position: right; background-size: cover;}
 
 .cafeService1 {background-image: url('img/coffee-services1.jpg'); background-position: center; background-size: cover;}
 .cafeService2 {background-image: url('img/coffee-services2.jpg'); background-position: center; background-size: cover;}
 .cafeService3 {background-image: url('img/coffee-services3.jpg'); background-position: center; background-size: cover;}
 
-
+/* cafe form */
+.cafeForm1 {background-image: url('img/coffee-form.jpg'); background-position: right; background-size: cover;}
 
 /* desktop media queries for 
     screens over 800px */
 @media screen and (min-width: 960px) {
+    /* semantic elements */
+    header {
+        height: 60vh;
+    }
     .flex {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
     .box {
-        height: 300px;
-        width: 300px;
-        max-height: 370px;
-        width: 300px;
-        margin: auto;
+        border-radius: 12px;
+        max-height: 400px;
+        max-width: 400px;
+        margin: 10px auto;
         display: flex;
     }
     img {
-        height: 350px;
-        width: 400px;
+        border-radius: 10px;
         height: 450px;
         width: 700px;
-        margin: auto;
+        margin: 10px auto;
     }
     .form {
-        background-color: rgb(124, 82, 34);
+        background-color: #fff;
+        border: 2px solid rgb(124, 82, 34);
         border-radius: 10px;
         width: 50%;
         padding: 10px;
         color: #fff;
         margin: auto;
     }
+    .form input {
+        background-color: #fff;
+        border: 2px solid rgb(124, 82, 34);
+        border-radius: 10px;
+        height: 100px;
+        width: 250px;
+    }
+    .form input textarea {
+        background-color: #333;
+    }
     .form h3 {
         color: #fff;
     }
-    .menu {
-        text-align: center;
+    .menu__container {
+        margin: auto;
+        max-width: 1100px;
+        
+
+        background-image: url('img/coffe-menu.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        
     }
-    .menu-border {
-        border: 1px solid;
+    .menu__container__background {
+        background: rgba(0,0,200, 0.6);
+    }
+    .menu {
+        opacity: 1;
+        border: 2px solid rgb(124, 82, 34);;
         border-radius: 10px;
-        background-color: rgb(124, 82, 34);
-        color: #fff;
+        background-color: none;
+        color: rgb(124, 82, 34);
+        max-width: 600px;
+        text-align: center;
         max-width: 850px;
         margin: auto;
-        height: auto;
+        
+        
+
+        
     }
     .menu-border h4 {
-        font-size: 25px;
+        font-size: 20px;
+        letter-spacing: 2px;
         padding: 10px;
         text-decoration: underline;
-        color: #fff;
+        color: rgb(124, 82, 34);
     }
     .left {float: left; margin-left: 10px;}
     .right {float: right; margin: 0px; padding-right: 10px;}
+
+    .rating__container {
+        max-width: 650px;
+        margin: auto;
+    }
 }

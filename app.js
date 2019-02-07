@@ -1,3 +1,4 @@
+// google maps
 var map;
 
 function initMap() {
@@ -6,3 +7,7 @@ function initMap() {
         zoom: 12
     });
 }
+
+// modal
+var coffeeType = document.getElementById('coffeeType');
+
