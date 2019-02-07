@@ -1,4 +1,4 @@
-/* 
+/*
     CSS documentation for index.html [ _CAFE ]
 
     ColorScheme
@@ -7,7 +7,7 @@
         Secondary color: rgb(239, 227, 174);
     Font Family
         font-family: 'Special Elite', cursive;
-    
+
     Scrolling
         Smooth scroll (add -moz for firefox browser)
 
@@ -53,14 +53,14 @@ nav {
 
 /* Global styles & attributes */
 .container {
-    
+
     margin: 10px auto;
     /* padding: 20px; */
 }
 .review {
     margin: 10px auto;
 }
- 
+
 
 /* header elements & props */
 header {
@@ -84,9 +84,9 @@ header a {
     text-decoration: underline;
     text-decoration-color: rgb(124, 82, 34);
 }
-/* Navigation properties for both 
+/* Navigation properties for both
     .toplinks [top navigation],
-    .botlinks [footer navigation] 
+    .botlinks [footer navigation]
 */
 a {
     background-color:#fff;
@@ -111,20 +111,20 @@ a:hover {
     text-decoration: underline;
 }
 /*
-Basic flex layout container 
+Basic flex layout container
 Apply background images through: [flexbox images CSS section]
     container = [div .container]
     elements = [.box], [.box p]
 */
 .box {
-    
+
     border-radius: 10px;
 
     height: 250px;
     width: 100%;
-    
+
     background: #000;
-    
+
     margin: 10px auto;
     display: flex;
 }
@@ -190,7 +190,7 @@ Apply background images through: [flexbox images CSS section]
     [div .form] + [form]
 */
 .form__container {
-    
+
     border-radius: 10px;
     height: 300px;
     width: 50%;
@@ -201,7 +201,7 @@ Apply background images through: [flexbox images CSS section]
 form {
     width: fit-content;
     margin: auto;
-    
+
 }
 form input, textarea {
     text-align: center;
@@ -210,7 +210,7 @@ form input, textarea {
     width: fit-content;
     margin: 10px;
     font-weight: bold;
-    
+
 
 }
 .form input[type=text] {
@@ -228,7 +228,7 @@ footer {
     line-height: 15px;
     padding: 25px;
     border-top: 4px solid rgb(124, 82, 34);
-    
+
 
 }
 /* responsive images */
@@ -263,7 +263,7 @@ h3, h4 {
 /* cafe form */
 .cafeForm1 {background-image: url('img/coffee-form.jpg'); background-position: right; background-size: cover;}
 
-/* desktop media queries for 
+/* desktop media queries for
     screens over 800px */
 @media screen and (min-width: 960px) {
     /* semantic elements */
@@ -312,32 +312,35 @@ h3, h4 {
     }
     .menu__container {
         margin: auto;
-        max-width: 1100px;
-        
+        max-width: 850px;
+        opacity: 1;
 
+
+
+    }
+    .menu__container__background {
+        background: rgba(124,82,24, 0.2);
+        /* opacity: 0.1; */
+        max-width: 850px;
         background-image: url('img/coffe-menu.png');
         background-repeat: no-repeat;
         background-position: top;
         background-size: cover;
-        
-    }
-    .menu__container__background {
-        background: rgba(0,0,200, 0.6);
     }
     .menu {
-        opacity: 1;
-        border: 2px solid rgb(124, 82, 34);;
+
+        border: 2px solid rgb(124, 82, 34);
         border-radius: 10px;
         background-color: none;
         color: rgb(124, 82, 34);
-        max-width: 600px;
+
         text-align: center;
         max-width: 850px;
         margin: auto;
-        
-        
 
-        
+
+
+
     }
     .menu-border h4 {
         font-size: 20px;
