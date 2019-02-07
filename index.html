@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Coffee House Melbourne</title>
     <!-- external stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
     <!-- external libaries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
-    <!-- get animate.css cdn -->
-
-    <!-- external scripts -->
-    <script src="app.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -36,11 +33,14 @@
         <div class="flex">
             <a href="#about">About</a>
             <a href="#menu">Menu</a>
-            <a href="#contact">Contact</a>
+            <a href="#order">Order</a>
         </div>
     </nav>
 
 <!-- section # about -->
+    <!-- mobile & tablet: content center -->
+    <!-- desktop: content center -->
+
     <section id="about">
         <div class="container">
             <h2>Le Cafe Melb.</h2>
@@ -75,8 +75,8 @@
     </section>
 
 <!-- section cafe menu -->
-    <!-- mobile & tablet: -->
-    <!-- desktop: -->
+    <!-- mobile & tablet: content center -->
+    <!-- desktop: content center, additional bk img -->
     <section id="menu">
         <div class="container">
             <h2>Le Menu</h2>
@@ -180,6 +180,9 @@
 <section id="review">
         <div class="rating__container">
             <h2>Customer Reviews</h2>
+            <br>
+            <div class="box cafeForm1"></div>
+            <br>
             <div class="review">
                 <q>Amazing international blends! will definatley be back</q><br>
                 <p>C D Harris, Melbourne.</p>
@@ -208,45 +211,81 @@
             <br>
             <p>Located in the heart of the Melbourne CBD, operating from the early hours right into the late
             evenings!</p>
-            <div class="box cafeForm1"></div>
             <br>
-            <!-- cafe order form -->
+            <!-- form container -->
             <div class="form__container">
-                <div class="form">
-                    <h3>Contact Information</h3>
-                    <form action="#">
-                        <input type="text" name="name" placeholder="Fullname Here"><br>
-                        <input type="text" name="email" placeholder="Email Here"><br>
-                        <input type="text" name="subject" placeholder="Topic | Subject"><br>
-                        <input type="text" name="dob" placeholder="Date of birth here"><br>
-                        <textarea name="comments" id="comments" cols="20" rows="5"></textarea><br>
-                        <button id="submitBtn">Submit</button>
+                <!-- form wrapper -->
+                <div class="form" id="order">
+                    <h3>Quick Coffee</h3>
+                    <!-- user form input -->
+                    <form>
+                        <label for="fname">Name</label>
+                        <br>
+                        <input type="text" id="fullname" name="fname" placeholder="Full Name" autocomplete="off">
+                        
+                        <label for="mobile">Mobile</label>
+                        <br>
+                        <input type="text" id="mobile" name="mobile" placeholder="Mobile" autocomplete="off">
+                        <!-- drop down selection -->
+                        <label for="country">Coffee</label>
+                        <br>
+                        <select id="select" name="coffee">
+                            <option value="cappuccino">Cappuccino</option>
+                            <option value="latte">Latte</option>
+                            <option value="espresso">Espresso</option>
+                            <option value="flat white">Flat White</option>
+                            <option value="irish coffee">Irish</option>
+                        </select>
+
+                        <!-- Trigger/Open The Modal -->
+                        <button id="submitBtn">Order Now</button>
                     </form>
                 </div><!-- div .form ends here-->
             </div><!-- form__container ends here -->
         </div><!-- div .container ends here -->
     </section>
 
-<!-- bottom navigation -->
-    <!-- mobile & tablet: flex wrap -->
-    <!-- desktop: flex + margin -->
-    <nav class="botnav">
-        <div class="flex">
-            <a href="#about">Top</a>
-            <a href="#menu">Menu</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
+<!-- coffee modal reciept -->
+<!-- modal section -->
+<section id="section__modal">
+        <div id="modal" class="modal">
+                <!-- Modal content -->
+                <div class="modal__content">
+                    <div class="modal__div">
+                        <span class="close">&times;</span>
+                        <br>
+                        <h3>Le Cafe Melb</h3>
+                        <!-- <p>Order Name:</p><br><p id="recieptname"></p> -->
+                        <p>Order No:</span><br><br><span class="lrgtxt"># 226</span></p>
+                    <br>
+                    <p id="reciept"><!-- js inserted elements go here! --></p>
+                    </div>
+                </div>
+            </div>
+</section>
+ 
 <!-- footer -->
     <!-- mobile & tablet: content center -->
     <!-- desktop: content center -->
     <footer>
+    <!-- bottom navigation -->
+        <!-- mobile & tablet: flex wrap -->
+        <!-- desktop: flex + margin -->
+        <nav class="botnav">
+            <div class="flex">
+                <a href="#about">Top</a>
+                <a href="#menu">Menu</a>
+                <a href="#order">Order</a>
+            </div>
+        </nav>
+        <br>
         <h5>Page created by C D Harris</h5>
         <h6>10% off first cup of coffee with coupon : <u>VWG-CC</u></h6>
     </footer>
 
-<!-- google maps api script -->
+    <!-- ext script -->
+    <script src="app.js"></script>
+    <!-- google maps api script -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgVFksqUlxDK_YRxd9X-WPWZZYcD1DUHg&callback=initMap"
     async defer>
     </script>

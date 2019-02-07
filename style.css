@@ -172,6 +172,20 @@ Apply background images through: [flexbox images CSS section]
     border-radius: 20px;
     padding: 20px;
 }
+
+/* form interaction */
+.form {
+    background: rgba(124, 82, 34, 0.2);
+    border: 2px solid rgb(124, 82, 34);
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+}
+.checkbox {
+    text-align: center;
+    display: block;
+
+}
+
 /* contact us information */
 /* maps */
 #maps {
@@ -184,26 +198,50 @@ Apply background images through: [flexbox images CSS section]
     font-size: 20px;
 }
 
-/* contact form containers
-    [div .container],
-    [div.container-form],
-    [div .form] + [form]
-*/
-.form__container {
+/* form elements & props */
+.form {
+    width: 100%;
+    /* border: 10px solid red; */
+    padding: 10px 15px;
+}
+label [for=fname] {
+    color: rgb(124, 82, 34);
+}
+/* form inputs */
+input[type=text], select {
+    border: 1px solid rgb(124, 82, 34);
+    border-radius: 10px;
+    color: rgb(124, 82, 34);
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 90%;
+    height: 100px;
+    /* text-align: center; */
+    margin: 8px auto;
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+    
+}
 
+
+
+/* .form {
+    
+    display: flex;
+    flex-direction: column;
+} */
+/* .form__container {
     border-radius: 10px;
     height: 300px;
     width: 50%;
     display: flex;
     margin: auto;
-}
+} */
 
-form {
-    width: fit-content;
-    margin: auto;
-
-}
-form input, textarea {
+/* form input, textarea {
     text-align: center;
     font-family: 'Special Elite', cursive;
     padding: 15px;
@@ -219,7 +257,7 @@ form input, textarea {
 form textarea:active {
     background-color: rgb(124, 82, 34);
     color: #fff;
-}
+} */
 
 /* footer  */
 footer {
@@ -248,6 +286,74 @@ h3, h4 {
     color: rgb(124, 82, 34);
     padding: 10px;
 }
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+.modal__div {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid rgb(124, 82, 34);
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.modal__div h3 {
+    color: rgb(124, 82, 34);
+    letter-spacing: 2px;
+}
+.lrgtxt {
+    font-size: 2.5em;
+}
+.modal p {
+    font-size: 1em;
+}
+  /* Modal Content/Box */
+  .modal__content {
+    background-color: rgba(124, 82, 34, 0.9);
+    border-radius: 10px;
+    width: 50%;
+    height: 350px;
+    margin: 10px auto;
+    
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  
+
 
 /* flexbox images */
 /* cafe item background applied to [div .box] */
@@ -284,39 +390,26 @@ h3, h4 {
     }
     img {
         border-radius: 10px;
-        height: 450px;
-        width: 700px;
+        
+        max-width: 600px;
+        width: 600px;
         margin: 10px auto;
     }
     .form {
-        background-color: #fff;
-        border: 2px solid rgb(124, 82, 34);
-        border-radius: 10px;
-        width: 50%;
-        padding: 10px;
-        color: #fff;
+        max-width: 600px;
         margin: auto;
+        padding: 10px;
     }
-    .form input {
-        background-color: #fff;
-        border: 2px solid rgb(124, 82, 34);
+   
+    /* maps */
+    #maps {
         border-radius: 10px;
-        height: 100px;
-        width: 250px;
-    }
-    .form input textarea {
-        background-color: #333;
-    }
-    .form h3 {
-        color: #fff;
+        max-height: 400px;
+        max-width: 600px;
     }
     .menu__container {
         margin: auto;
         max-width: 850px;
-        opacity: 1;
-
-
-
     }
     .menu__container__background {
         background: rgba(124,82,24, 0.2);
@@ -333,21 +426,38 @@ h3, h4 {
         border-radius: 10px;
         background-color: none;
         color: rgb(124, 82, 34);
-
-        text-align: center;
         max-width: 850px;
         margin: auto;
-
-
-
-
-    }
-    .menu-border h4 {
+        text-align: center;
+}
+    .menu h4 {
         font-size: 20px;
+        text-shadow: 2px 2px rgb(124, 82, 34);;
         letter-spacing: 2px;
         padding: 10px;
         text-decoration: underline;
-        color: rgb(124, 82, 34);
+        color: #fff;
+    }
+
+    /*  modal props */
+    .modal__content {
+        max-width: 30%;;
+    }
+    .modal__div {
+        align-items: center;
+        background-color: #fff;
+        border: 2px solid rgb(124, 82, 34);
+        border-radius: 10px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        justify-content: center;
+        text-align: center;
+        width: 400px;
+    }
+    nav {
+        max-width: 600px;
     }
     .left {float: left; margin-left: 10px;}
     .right {float: right; margin: 0px; padding-right: 10px;}
