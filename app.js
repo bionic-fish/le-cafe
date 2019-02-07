@@ -1,23 +1,19 @@
+// MODAL
 // Get the modal
 var modal = document.getElementById('modal');
-
 // Get the button that opens the modal
 var btn = document.getElementById("submitBtn");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks on the button, open the modal 
 submitBtn.onclick = function() {
   modal.style.display = "block";
   event.preventDefault();
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -25,16 +21,7 @@ window.onclick = function(event) {
   }
 }
 
-
-// get the users name 
-var fullname;
-var recieptname = document.getElementById('recieptname');
-fullname = document.getElementById('fullname').value;
-
-recieptname.innerHTML = fullname;
-
-console.log(fullname);
-
+// MODAL OUTPUT
 // get the coffee form options
 var coffee = document.getElementById('select');
 // get the modal output element
@@ -50,7 +37,7 @@ coffee.addEventListener('change', function() {
   reciept.innerHTML = 'Your order of #1 ' + '<u>' + coffee.value + '</u>' + ' is now being prepared!'; 
 });
 
-// google maps api
+// GOOGLE MAPS
 // map variable
 var map;
 // initiate map function
